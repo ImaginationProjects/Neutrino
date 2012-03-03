@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="Requests/" including="com/|neutrino/" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/bonecp-0.7.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/guava-11.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/hibernate-commons-annotations-4.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/hibernate-core-4.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/javassist-3.15.0-GA.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/jboss-logging-3.1.0.CR2.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/mysql-connector-java-5.1.18-bin.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/netty-3.2.7.Final.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/slf4j-api-2.0.99.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/NeutrinoServer/libraries/slf4j-simple-1.6.99.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
