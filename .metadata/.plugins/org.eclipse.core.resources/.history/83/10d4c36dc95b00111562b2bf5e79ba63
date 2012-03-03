@@ -1,0 +1,23 @@
+package core.game.users;
+
+import org.jboss.netty.channel.Channel;
+import java.util.*;
+import core.data.habbo.Habbo;
+import core.network.SocketHandler;
+
+public class Session {
+	// Habbo session
+	public Channel Socket;
+	public SocketHandler Client;
+	public Habbo Habbo;
+	public int SessionId;
+	
+	public static Map<Channel, Session> SessionsByChannels;
+	
+	public void SetSession(Channel Socket, SocketHandler Client, int Session)
+	{
+		if(SessionsByChannels == null)
+			SessionsByChannels = new HashMap<Channel, Session>();
+		Session currentSession = new Session();
+	}
+}

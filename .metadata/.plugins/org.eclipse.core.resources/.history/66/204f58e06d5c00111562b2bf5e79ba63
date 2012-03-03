@@ -1,0 +1,5 @@
+package core.data.habbo;
+
+public class Habbo {
+	public int Id;
+}

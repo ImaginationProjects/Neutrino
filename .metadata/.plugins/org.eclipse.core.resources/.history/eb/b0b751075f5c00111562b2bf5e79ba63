@@ -1,0 +1,8 @@
+# Neutrino final revision, developed by Itachi
+# TCP Sockets
+tcp.ipbase=127.0.0.1
+tcp.portbase=8542
+# put ip separed by ';' (like 127.0.0.1;127.0.0.1) or 'all'
+tcp.connectionsallowed=all
+tcp.logpackets=true
+tcp.maxallowedconnections=2500

@@ -1,0 +1,7 @@
+package com.sulake.habbo.communication.messages.incoming.handshake;
+
+import core.messages.MessageEvent;
+
+public class HelloMessageEvent extends MessageEvent {
+	
+}

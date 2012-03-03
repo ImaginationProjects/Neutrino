@@ -1,0 +1,46 @@
+package com.sulake.habbo.communication.messages.outgoing.administration;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.jboss.netty.channel.Channel;
+
+import neutrino.Environment;
+import neutrino.AdministrationManager.CallsForHelp;
+import neutrino.AdministrationManager.Chatlog;
+import neutrino.Network.ServerHandler;
+import neutrino.PacketsInformation.ServerEvents;
+import neutrino.RoomManager.Room;
+import neutrino.RoomManager.RoomEvent;
+import neutrino.System.ServerMessage;
+import neutrino.UserManager.Habbo;
+
+public class PickTicketMessageComposer {
+	public static void Compose(ServerHandler Client, Habbo User, Environment Server) throws Exception
+	{
+		if(User.RankLevel < 5)
+        {
+			return;
+        }
+		Habbo CurrentUser = Client.GetSession();
+        int UserId = Client.inreader.readInt();
+        Channel Socket = Client.Socket;
+        int CallForHelpID = Client.inreader.readInt();
+        CallsForHelp C = CallsForHelp.Calls.get(CallForHelpID);
+        if(C == null)
+        	return;
+        
+        Habbo cUser = Habbo.UsersbyId.get(UserId);
+        ServerMessage Issue = new ServerMessage(ServerEvents.MOD_PIKCUPISSUE);
+		Issue.writeInt(1); // count
+        Issue.writeInt(C.Id); // call id 
+        Issue.writeInt(User.Id); // UserId
+        Issue.writeUTF(User.UserName);
+        Issue.writeBoolean(false); // not defined
+        Issue.writeInt(0); // not defined
+
+        Issue.Send(Socket);
+        
+	}
+}

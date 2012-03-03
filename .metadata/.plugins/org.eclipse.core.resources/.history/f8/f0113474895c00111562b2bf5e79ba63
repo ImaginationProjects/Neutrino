@@ -1,0 +1,24 @@
+package core.storage;
+
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.jolbox.bonecp.BoneCP;
+import com.jolbox.bonecp.BoneCPConfig;
+
+import core.Environment;
+
+public class DatabaseManager {
+    // Hmm, must do some bonecp working
+	
+	public Statement prepareStatement() throws Exception
+	{
+		Statement s = BoneCPConnection.getConnection().createStatement();
+		return s;        
+	}
+	
+	public void closeStatement(Statement s) throws Exception
+	{
+		s.close();
+	}
+}

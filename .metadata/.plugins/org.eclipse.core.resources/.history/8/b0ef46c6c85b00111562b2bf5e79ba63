@@ -1,0 +1,9 @@
+package core.game.users;
+
+import org.jboss.netty.channel.Channel;
+
+
+public class Session {
+	// Habbo session
+	
+}

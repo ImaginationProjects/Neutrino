@@ -1,0 +1,28 @@
+package com.sulake.habbo.communication.messages.outgoing.userinformation;
+
+import java.util.ArrayList;
+
+import neutrino.Environment;
+import neutrino.Network.ServerHandler;
+import neutrino.PacketsInformation.ServerEvents;
+import neutrino.RoomManager.Room;
+import neutrino.System.ServerMessage;
+import neutrino.UserManager.Friend;
+import neutrino.UserManager.Habbo;
+
+public class HelpTicketMessageComposer {
+	public static void Compose(ServerHandler Client, Habbo CurrentUser) throws Exception
+	{
+		Habbo User = CurrentUser;    
+		String Content = Client.inreader.readUTF();
+		if(!User.IsOnRoom)
+			return;
+		int Me = Client.inreader.readInt();
+		int Category = Client.inreader.readInt();
+		int ReportedUser = Client.inreader.readInt();
+		Room CurrentId = Room.Rooms.get(CurrentUser.CurrentRoomId);
+		
+		Environment.returnDB().executeUpdate("INSERT INTO cfhs (id, state, category, timestamp, priority, reporterid, reportedid, message, roomid) VALUES (NULL, '0', '" + Category + "', '" + Environment.getIntUnixTimestamp() + "', '0', '" + User.Id + "', '" + ReportedUser + "', '" + Content + "', '" + User.CurrentRoomId + "')");
+
+	}
+}

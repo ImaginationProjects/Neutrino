@@ -1,0 +1,186 @@
+package neutrino.UserManager;
+
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+
+import neutrino.Environment;
+import neutrino.Network.ThreadPool.ThreadPoolManager;
+import neutrino.PacketsInformation.ServerEvents;
+import neutrino.RoomManager.Room;
+import neutrino.SnowWarManager.SnowWar;
+import neutrino.System.ServerMessage;
+
+public class UserManager implements Runnable {
+    // Neutrino's Control System: Luz
+	public static int GestorsId = 3;
+	public static Map<Integer, UserManager> GestorManager;
+	public static UserManager GeneralGestor;
+	public Environment Server;
+	public int Id;
+	public String Action;
+	public Habbo CurrentHabbo;
+	public int Seconds;
+	public static void InitManager(Environment cServer)
+	{
+		// Init all
+		GeneralGestor = new UserManager();
+		GeneralGestor.Server = cServer;
+		GestorManager = new HashMap<Integer, UserManager>();
+	}
+	
+	public static UserManager GetGestor()
+	{
+		return GeneralGestor;
+	}
+	
+	public void InitTimerForUser(Habbo User, int Seconds, int Interval, String Action)
+	{
+		if(User == null || Seconds <= 0 || Action == "")
+			return;
+		
+		UserManager Gestor = new UserManager();
+		//if (Action == "Wave")
+	         Gestor.Action = Action;
+		Gestor.Id = GestorsId;
+		Gestor.Seconds = Seconds;
+		Gestor.CurrentHabbo = User;
+		GestorManager.put(GestorsId, Gestor);
+		GestorsId++;
+		long l = (long)Interval;
+		ThreadPoolManager._myTimerPoolingThreads.scheduleAtFixedRate(Gestor, 0L, Interval, TimeUnit.MILLISECONDS);
+	}
+	
+	public void run()
+	{
+		if(this.Seconds == 0)
+		{
+			GestorManager.remove(this.Id); 
+			return;
+		}
+		
+		GetGestor().Server.WriteLine(Action);
+		this.Seconds--;
+	}
+	
+	
+	// Some ServerMessage things
+	public static void SendMessageToAllUsers(ServerMessage Message) throws Exception
+	{
+		Iterator reader = Habbo.UsersbyId.entrySet().iterator();
+		while(reader.hasNext())
+		{
+			Habbo nUser = (Habbo)(((Map.Entry)reader.next()).getValue());
+			if(nUser.IsOnline)
+				Message.Send(nUser.CurrentSocket);
+		}
+	}
+	
+	public static void SendMessageToAllSnowPlayers(SnowWar War, ServerMessage Message) throws Exception
+	{
+		Iterator reader = War.Players.entrySet().iterator();
+		while (reader.hasNext())
+        {
+        	Habbo nUser = (Habbo)(((Map.Entry)reader.next()).getValue());
+ 		    if(!(nUser.CurrentWar.equals(null)) && nUser.CurrentWar.Id == War.Id)
+ 		    	Message.Send(nUser.CurrentSocket);
+        }
+	}
+	
+	public static void SendMessageToAllUsersOnARoom(ServerMessage Message) throws Exception
+	{
+		Iterator reader = Habbo.UsersbyId.entrySet().iterator();
+		while(reader.hasNext())
+		{
+			Habbo nUser = (Habbo)(((Map.Entry)reader.next()).getValue());
+			if(nUser.IsOnline && nUser.IsOnRoom)
+				Message.Send(nUser.CurrentSocket);
+		}
+	}
+	
+	public static void SendMessageToMyFriends(ServerMessage Message, Habbo User) throws Exception
+	{
+		List<Friend> FriendsList = Friend.SelectFriendsForId(User.Id);
+	    Iterator reader = FriendsList.iterator();
+	    while(reader.hasNext())
+	    {
+	    	Friend F = (Friend)reader.next();
+	    	Habbo fUser = Habbo.UsersbyId.get(F.FriendId);
+	    	if(fUser.IsOnline)
+	    		Message.Send(fUser.CurrentSocket);
+	    }
+	}
+	
+	public static void SendMessageToUsersOnRoomId(int RoomId, ServerMessage Message) throws Exception
+	{
+		Iterator reader = Habbo.UsersbyId.entrySet().iterator();
+		while(reader.hasNext())
+		{
+			Habbo nUser = (Habbo)(((Map.Entry)reader.next()).getValue());
+			if(nUser.CurrentRoomId == RoomId && nUser.IsOnline && nUser.IsOnRoom)
+			   Message.Send(nUser.CurrentSocket);
+		}
+	}
+	
+	public static void SendMessageToUsersOnRoomIdButMe(int RoomId, int UserId, ServerMessage Message) throws Exception
+	{
+		Iterator reader = Habbo.UsersbyId.entrySet().iterator();
+		while(reader.hasNext())
+		{
+			Habbo nUser = (Habbo)(((Map.Entry)reader.next()).getValue());
+			if(nUser.CurrentRoomId == RoomId && nUser.IsOnline && nUser.IsOnRoom && nUser.Id != UserId)
+			   Message.Send(nUser.CurrentSocket);
+		}
+	}
+	
+	public static void SendTwoMessagesToUsersOnRoomId(int RoomId, ServerMessage Message, ServerMessage Message2) throws Exception
+	{
+		Iterator reader = Habbo.UsersbyId.entrySet().iterator();
+		while(reader.hasNext())
+		{
+			Habbo nUser = (Habbo)(((Map.Entry)reader.next()).getValue());
+			if(nUser.CurrentRoomId == RoomId && nUser.IsOnline && nUser.IsOnRoom)
+			{
+			   Message.Send(nUser.CurrentSocket);
+			   Message2.Send(nUser.CurrentSocket);
+			}
+		}
+	}
+	
+	
+	
+	public static void SendMessageToUsersOnRoomIdByUserList(int RoomId, ServerMessage Message) throws Exception
+	{
+		Iterator reader = Room.Rooms.get(RoomId).UserList.iterator();
+		while(reader.hasNext())
+		{
+			Habbo nUser = (Habbo)reader.next();
+			if(nUser.CurrentRoomId == RoomId && nUser.IsOnline && nUser.IsOnRoom)
+			   Message.Send(nUser.CurrentSocket);
+		}
+	}
+	
+	public static void SendMessageToAllUsersButMe(Habbo User, ServerMessage Message) throws Exception
+	{
+		Iterator reader = Habbo.UsersbyId.entrySet().iterator();
+		while(reader.hasNext())
+		{
+			Habbo nUser = (Habbo)(((Map.Entry)reader.next()).getValue());
+			if(nUser.Id != User.Id && nUser.IsOnline)
+				Message.Send(nUser.CurrentSocket);
+		}
+	}
+	
+	public static void SendMessageToAUser(Habbo User, ServerMessage Message) throws Exception
+	{
+		Iterator reader = Habbo.UsersbyId.entrySet().iterator();
+		while(reader.hasNext())
+		{
+			Habbo nUser = (Habbo)(((Map.Entry)reader.next()).getValue());
+			if(nUser.Id == User.Id && nUser.IsOnline)
+				Message.Send(nUser.CurrentSocket);
+		}
+	}
+	
+	
+
+}

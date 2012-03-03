@@ -1,0 +1,9 @@
+package neutrino.UserManager;
+
+public class DanceNumber {
+	public static int GetDanceNum(Dances dace)
+    {
+   	 if (effect == Effects.GLOW)
+            return 1;
+    }
+}

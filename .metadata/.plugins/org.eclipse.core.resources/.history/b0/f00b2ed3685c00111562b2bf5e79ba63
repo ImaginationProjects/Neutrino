@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database session settings -->
+        <property name="hibernate.connection.provider_class">com.jolbox.bonecp.provider.BoneCPConnectionProvider</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- url=> jdbc:mysql://[host]:[port]/[databse name] -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/habbo</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Y2Z#Q=q8Ao^HMj!R)*A:654f3&|G7,Fd0#H(j6>,</property>
+
+        <!-- BoneCP session settings -->
+        <property name="bonecp.idleMaxAgeInMinytes">240</property>
+        <property name="bonecp.setIdleConnectionTestPeriodInMinutes">1</property>
+        <property name="bonecp.partitionCount">4</property>
+        <property name="bonecp.acquireIncrement">10</property>
+        <property name="bonecp.maxConnectionsPerPartition">500</property>
+        <property name="bonecp.minConnectionsPerPartition">10</property>
+        <property name="bonecp.statementsCacheSize">50</property>
+        <property name="bonecp.releaseHelperThreads">3</property>		
+        <property name="bonecp.setLazyInit">false</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">false</property>
+
+        <mapping resource="styx/habbo/beans/User.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

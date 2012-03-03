@@ -1,0 +1,23 @@
+package neutrino.UserManager;
+
+public class DanceNumber {	
+	public static int GetDanceNum(Dances dance)
+	{
+	   	 if (dance == Dances.DANCE)
+	            return 1;
+	   	 
+	   	if (dance == Dances.POGO_MOGO)
+            return 2;
+	   	
+	   	if (dance == Dances.NONE)
+            return 1;
+	   	
+	   	if (dance == Dances.NONE)
+            return 1;
+	   	
+	   	if (dance == Dances.NONE)
+            return 0;
+	   	 
+	   	return 0;
+    }
+}

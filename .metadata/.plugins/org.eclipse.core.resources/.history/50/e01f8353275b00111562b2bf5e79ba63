@@ -1,0 +1,49 @@
+package com.sulake.habbo.communication.messages.outgoing.userinformation;
+
+import java.util.ArrayList;
+
+import neutrino.Environment;
+import neutrino.AdministrationManager.CallsForHelp;
+import neutrino.Network.ServerHandler;
+import neutrino.PacketsInformation.ServerEvents;
+import neutrino.RoomManager.Room;
+import neutrino.System.ServerMessage;
+import neutrino.UserManager.Friend;
+import neutrino.UserManager.Habbo;
+import neutrino.UserManager.UserManager;
+
+public class HelpTicketMessageComposer {
+	public static void Compose(ServerHandler Client, Habbo CurrentUser) throws Exception
+	{
+		Habbo User = CurrentUser;    
+		String Content = Client.inreader.readUTF();
+		if(!User.IsOnRoom)
+			return;
+		int Me = Client.inreader.readInt();
+		int Category = Client.inreader.readInt();
+		int ReportedUser = Client.inreader.readInt();
+		Room CurrentId = Room.Rooms.get(CurrentUser.CurrentRoomId);
+		
+		CallsForHelp C = CallsForHelp.Add(1, Category, 0, User.Id, ReportedUser, CurrentId.Id, Content);
+		Environment.returnDB().executeUpdate("INSERT INTO cfhs (id, state, category, timestamp, priority, reporterid, reportedid, message, roomid) VALUES (NULL, '1', '" + Category + "', '" + Environment.getIntUnixTimestamp() + "', '0', '" + User.Id + "', '" + ReportedUser + "', '" + Content + "', '" + User.CurrentRoomId + "')");
+		
+		ServerMessage Issue = new ServerMessage(ServerEvents.MOD_ADDISSUE);
+		Issue.writeInt(C.Id); // id
+        Issue.writeInt(C.State); // state 
+        Issue.writeInt(1); // cat id
+        Issue.writeInt(C.Category); // reported cat id
+        Issue.writeInt((Environment.getIntUnixTimestamp() - C.Timestamp)); // timestamp
+        Issue.writeInt(C.Priority); // priority
+        Issue.writeInt(C.ReportedId); // reporter id
+        Issue.writeUTF(Habbo.UsersbyId.get(C.ReporterId).UserName); // reporter name
+        Issue.writeInt(C.ReportedId); // reported id
+        Issue.writeUTF(Habbo.UsersbyId.get(C.ReportedId).UserName); // reported name
+        Issue.writeInt(User.Id); // mod id
+        Issue.writeUTF(User.UserName); // mod name
+        Issue.writeUTF(C.Message); // issue message
+        Issue.writeInt(C.RoomId); // room id
+        Room RoomData = Room.Rooms.get(C.RoomId);
+        Issue.writeUTF(RoomData.Name); // room name
+        UserManager.SendMessageToAllStaffs(Issue);
+	}
+}

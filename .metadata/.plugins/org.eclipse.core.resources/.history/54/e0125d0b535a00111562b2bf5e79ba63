@@ -1,0 +1,40 @@
+package neutrino.RoomManager;
+
+import java.util.*;
+
+public class RoomEvent {
+	public int Id;
+	public int OwnerId;
+	public int RoomId;
+	public int Category;
+	public String Title;
+	public String Description;
+	public String Created;
+	public List<String> Tags;
+	
+	public static int LastId;
+	public static Map<Integer, RoomEvent> Events;
+	
+	public static void Init()
+	{
+		LastId = 0;
+		Events = new HashMap<Integer, RoomEvent>();
+	}
+	
+	public static void Add(int aCategory, String aTitle, String aDescription, int Own, int rId, List<String> aTags)
+	{
+		RoomEvent E = new RoomEvent();
+		LastId++;
+		E.Id = LastId;
+		E.OwnerId = Own;
+		E.RoomId = rId;
+		E.Category = aCategory;
+		E.Title = aTitle;
+		E.Description = aDescription;
+		Calendar calendario = new GregorianCalendar();
+        E.Created = calendario.get(Calendar.HOUR_OF_DAY) + ":" + calendario.get(Calendar.MINUTE);
+        E.Tags = aTags;
+        Events.put(E.Id, E);
+	}
+	
+}

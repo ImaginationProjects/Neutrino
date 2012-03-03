@@ -1,0 +1,27 @@
+package neutrino.AdministrationManager;
+
+public class CallForHelpStateNumber {
+	public static int GetNumber(CallForHelpState e)
+	{
+		if(e == CallForHelpState.NONE)
+			return 0;
+		else if(e == CallForHelpState.NONE)
+			return 0;
+		else if(e == CallForHelpState.NONE)
+			return 0;
+		
+		return 0;
+	}
+	
+	public static CallForHelpState GetState(int Number)
+	{
+		if(Number == 0)
+			return CallForHelpState.NONE;
+		else if(Number == 0)
+			return CallForHelpState.NONE;
+		else if(Number == 0)
+			return CallForHelpState.NONE;
+		
+		return CallForHelpState.NONE;
+	}
+}

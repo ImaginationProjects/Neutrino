@@ -1,0 +1,37 @@
+package com.sulake.habbo.communication.messages.outgoing.userinformation;
+
+import java.util.Iterator;
+
+import neutrino.ItemManager.ItemInformation;
+import neutrino.ItemManager.UserItem;
+import neutrino.Network.ServerHandler;
+import neutrino.PacketsInformation.ServerEvents;
+import neutrino.System.ServerMessage;
+import neutrino.UserManager.Friend;
+import neutrino.UserManager.Habbo;
+
+public class TradeObjectMessageComposer {
+	public static void Compose(ServerHandler Client, Habbo CurrentUser) throws Exception
+	{
+		Habbo User = CurrentUser;    
+		int oId = User.TradingWith;
+		Habbo oUser = Habbo.UsersbyId.get(User.TradingWith);
+		int ItemToAdd = Client.inreader.readInt();
+		User.TradingItems.add(ItemToAdd);
+        ServerMessage Trade = new ServerMessage(ServerEvents.CanTrade);
+        Trade.writeInt(User.Id);
+        Trade.writeInt(User.TradingItems.size());
+        Iterator reader = User.TradingItems.iterator();
+        while(reader.hasNext())
+        {
+        	UserItem Item = UserItem.Items.get(((Integer)reader.next()));
+            ItemInformation furniData = ItemInformation.Items.get(I.ItemId);
+        	Trade.writeInt(Item.Id);
+        }
+        Trade.writeInt(oUser.Id);
+        Trade.writeInt(oUser.TradingItems.size());
+        Trade.Send(Client.Socket);
+        Trade.Send(oUser.CurrentSocket);
+
+	}
+}

@@ -1,0 +1,10 @@
+package core.storage;
+
+public class DatabaseManager {
+    // Hmm, must do some bonecp working
+	
+	public static DatabaseManager CreateNewDatabaseManager()
+	{
+		
+	}
+}

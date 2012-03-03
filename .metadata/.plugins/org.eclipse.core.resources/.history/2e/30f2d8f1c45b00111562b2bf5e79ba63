@@ -1,0 +1,10 @@
+package core;
+
+
+public class Neutrino {
+	public static void main(String[] args) throws Exception {
+        // Some idiot stuff, starting cores or something...
+		System.out.println("Welcome to Neutrino Final Version! Developed by Itachi");
+		Environment.Init();
+    }
+}

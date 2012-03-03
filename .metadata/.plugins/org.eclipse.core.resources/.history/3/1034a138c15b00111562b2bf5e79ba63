@@ -1,0 +1,7 @@
+
+
+public class Neutrino {
+	public static void main(String[] args) throws Exception {
+        // Some idiot stuff, starting cores or something...
+    }
+}

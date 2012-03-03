@@ -1,0 +1,28 @@
+package core.storage;
+
+import com.jolbox.bonecp.BoneCP;
+import com.jolbox.bonecp.BoneCPConfig;
+
+import core.Environment;
+
+public class DatabaseManager {
+    // Hmm, must do some bonecp working
+	public BoneCP BoneCPConnection;
+	public static DatabaseManager CreateNewDatabaseManager() throws Exception
+	{
+		DatabaseManager D = new DatabaseManager();
+		try
+        {
+            Class.forName("com.mysql.jdbc.Driver"); // load jdbc driver
+        } catch (Exception e)
+        {
+        	Environment.WriteException(e);
+        }
+		BoneCPConfig config = new BoneCPConfig();
+		config.setJdbcUrl("jdbc:mysql://" + Environment.Properties.get("database.connection.host") + ":" + Environment.Properties.get("database.connection.port") + "/" + Environment.Properties.get("database.connection.name")); // set jdbc address
+    	config.setUsername(Environment.Properties.get("database.connection.username")); // username
+    	config.setPassword(Environment.Properties.get("database.connection.password")); // and password
+    	config.setMinConnectionsPerPartition(Integer.parseInt(Environment.Properties.get("database.connection")))
+		return D;
+	}
+}

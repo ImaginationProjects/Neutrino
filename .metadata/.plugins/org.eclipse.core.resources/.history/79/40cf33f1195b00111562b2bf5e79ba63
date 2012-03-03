@@ -1,0 +1,48 @@
+package com.sulake.habbo.communication.messages.outgoing.userinformation;
+
+import java.util.ArrayList;
+
+import neutrino.Network.ServerHandler;
+import neutrino.PacketsInformation.ServerEvents;
+import neutrino.RoomManager.Room;
+import neutrino.System.ServerMessage;
+import neutrino.UserManager.Friend;
+import neutrino.UserManager.Habbo;
+
+public class HelpTicketMessageComposer {
+	public static void Compose(ServerHandler Client, Habbo CurrentUser) throws Exception
+	{
+		Habbo User = CurrentUser;    
+		String Content = Client.inreader.readUTF();
+		int Me = Client.inreader.readInt();
+		int Category = Client.inreader.readInt();
+		int ReportedUser = Client.inreader.readInt();
+		Room CurrentId = Room.Rooms.get(CurrentUser.CurrentRoomId);
+		
+		Integer // Issue Id 
+		Integer // state  
+		Integer // Category id 
+		Integer // reported Category Id 
+		Integer // timestamp of the report 
+		Integer // priority 
+		Integer // Reporter User Id 
+		StringBreak // Reporter User Name 
+		Integer // Reported User Id 
+		StringBreak // Reported User Name 
+		Integer // Moderator Id 
+		StringBreak // Moderator Name 
+		StringBreak // Issue Message 
+		Integer; // Room Id 
+		StringBreak // Room Name 
+		Integer // Room Type: 0 private - 1 public 
+		if the room is private put: 
+		StringBreak // Room events (event1,event2) 
+		Integer // Room flat category (staff,games,trading...) 
+		Integer // Nothing .. put number 0 or any.. 
+		if the room is public put: 
+		StringBreak // Nothing .. put "" 
+		Integer // Room flat Id 
+		StringBreak // Nothing .. put ""  
+
+	}
+}

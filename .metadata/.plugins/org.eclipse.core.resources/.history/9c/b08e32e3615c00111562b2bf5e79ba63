@@ -1,0 +1,26 @@
+# Neutrino final revision, developed by Itachi
+# TCP Sockets
+tcp.ipbase=127.0.0.1
+tcp.portbase=8542
+# put ip separed by ';' (like 127.0.0.1;127.0.0.1) or 'all'
+tcp.connectionsallowed=all
+tcp.logpackets=true
+tcp.maxallowedconnections=2500
+# MUS Sockets
+# later...
+# Database Connection
+database.connection.host=localhost
+database.connection.port=3306
+database.connection.username=root
+database.connection.password=Y2Z#Q=q8Ao^HMj!R)*A:654f3&|G7,Fd0#H(j6>,
+database.connection.name=habbo
+database.connection.maxpoolingsize=500
+database.connection.minpoolingsize=1
+database.connection.setpartitions=4
+# Hibernate Connection
+hibernate.dialect=net.sf.hibernate.dialect.MySQLDialect
+hibernate.connection.driver_class=org.gjt.mm.mysql.Driver
+hibernate.connection.driver_class=com.mysql.jdbc.Driver
+hibernate.connection.url=jdbc:mysql:localhost:3306//habbo
+hibernate.connection.username=root
+hibernate.connection.password=Y2Z#Q=q8Ao^HMj!R)*A:654f3&|G7,Fd0#H(j6>,

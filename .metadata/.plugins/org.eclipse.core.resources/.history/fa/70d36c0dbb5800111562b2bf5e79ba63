@@ -1,0 +1,42 @@
+package com.sulake.habbo.communication.messages.outgoing.rooms;
+
+import java.util.concurrent.FutureTask;
+import neutrino.Environment;
+import neutrino.MessageEvents.MessageEvent;
+import neutrino.Network.ServerHandler;
+import neutrino.PacketsInformation.ServerEvents;
+import neutrino.PetManager.Pet;
+import neutrino.System.ServerMessage;
+import neutrino.UserManager.Habbo;
+import neutrino.UserManager.SubscriptionManager;
+import neutrino.UserManager.UserManager;
+import neutrino.RoomManager.CommandHandler;
+import neutrino.RoomManager.Room;
+import org.jboss.netty.channel.Channel;
+
+import com.sulake.habbo.communication.messages.outgoing.userinformation.LoadPetInventaryMessageComposer;
+
+public class PickUpPetMessageComposer {
+	public static void Compose(ServerHandler Client, Habbo cUser, Environment Server) throws Exception
+	{
+		Habbo CurrentUser = Client.GetSession();
+        int RoomId = CurrentUser.CurrentRoomId;
+        Channel Socket = Client.Socket;
+        Room R = Room.Rooms.get(RoomId);
+        
+        int PetId = Client.in.readInt();
+        Pet PetData = Pet.Pets.get(PetId);
+        ServerMessage GetOut = new ServerMessage(ServerEvents.GetOutOfRoom);
+        GetOut.writeUTF(PetData.SessionId + "");
+        UserManager.SendMessageToUsersOnRoomId(PetData.RoomId, GetOut);
+        PetData.RoomId = 0;
+        PetData.IsOnRoom = false;
+        if(PetData.HaveUserOnMe)
+        {
+        	Habbo Owner = Habbo.UsersbyId.get(PetData.UserId);
+        }
+        Server.GetDatabase().executeUpdate("UPDATE pets SET roomid = '0' WHERE id = " + PetId);
+        LoadPetInventaryMessageComposer.Compose(Client, cUser, Server);
+        R.PetList.remove(PetData);
+	}
+}

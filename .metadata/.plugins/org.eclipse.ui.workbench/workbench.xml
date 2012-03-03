@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="30" version="2.0">
+<workbenchAdvisor/>
+<window height="768" maximized="true" width="1024" x="780" y="180">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="159" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="124" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="74" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="122" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="133" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="185" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1326577756823" focus="true" label="Workspace - Java">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Environment.java" partName="Environment.java" path="C:/workspace/NeutrinoEmulator/src/core/Environment.java" title="Environment.java" tooltip="NeutrinoEmulator/src/core/Environment.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoEmulator/src/core/Environment.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3390" selectionTopPixel="1507"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServerMessage.java" partName="ServerMessage.java" path="C:/workspace/NeutrinoEmulator/src/core/messages/ServerMessage.java" title="ServerMessage.java" tooltip="NeutrinoEmulator/src/core/messages/ServerMessage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoEmulator/src/core/messages/ServerMessage.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2631" selectionTopPixel="1230"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServerMessage.java" partName="ServerMessage.java" path="C:/workspace/NeutrinoServer/src/neutrino/System/ServerMessage.java" title="ServerMessage.java" tooltip="NeutrinoServer/src/neutrino/System/ServerMessage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoServer/src/neutrino/System/ServerMessage.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="2799" selectionOffset="703" selectionTopPixel="1162"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MessageEvent.java" partName="MessageEvent.java" path="C:/workspace/NeutrinoServer/src/neutrino/MessageEvents/MessageEvent.java" title="MessageEvent.java" tooltip="NeutrinoServer/src/neutrino/MessageEvents/MessageEvent.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoServer/src/neutrino/MessageEvents/MessageEvent.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="97" selectionOffset="313" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MessageEvent.java" partName="MessageEvent.java" path="C:/workspace/NeutrinoEmulator/src/core/messages/MessageEvent.java" title="MessageEvent.java" tooltip="NeutrinoEmulator/src/core/messages/MessageEvent.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoEmulator/src/core/messages/MessageEvent.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="79" selectionOffset="136" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ClientEvents.java" partName="ClientEvents.java" path="C:/workspace/NeutrinoEmulator/src/core/packetlog/ClientEvents.java" title="ClientEvents.java" tooltip="NeutrinoEmulator/src/core/packetlog/ClientEvents.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoEmulator/src/core/packetlog/ClientEvents.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="242" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Environment.java" partName="Environment.java" path="C:/workspace/NeutrinoServer/src/neutrino/Environment.java" title="Environment.java" tooltip="NeutrinoServer/src/neutrino/Environment.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoServer/src/neutrino/Environment.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="138" selectionOffset="28223" selectionTopPixel="5412"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HelloMessageEvent.java" partName="HelloMessageEvent.java" path="C:/workspace/NeutrinoEmulator/src/com/sulake/habbo/communication/messages/incoming/handshake/HelloMessageEvent.java" title="HelloMessageEvent.java" tooltip="NeutrinoEmulator/src/com/sulake/habbo/communication/messages/incoming/handshake/HelloMessageEvent.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoEmulator/src/com/sulake/habbo/communication/messages/incoming/handshake/HelloMessageEvent.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="415" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SocketHandler.java" partName="SocketHandler.java" path="C:/workspace/NeutrinoEmulator/src/core/network/SocketHandler.java" title="SocketHandler.java" tooltip="NeutrinoEmulator/src/core/network/SocketHandler.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoEmulator/src/core/network/SocketHandler.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5061" selectionTopPixel="1519"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Habbo.java" partName="Habbo.java" path="C:/workspace/NeutrinoEmulator/src/core/data/habbo/Habbo.java" title="Habbo.java" tooltip="NeutrinoEmulator/src/core/data/habbo/Habbo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoEmulator/src/core/data/habbo/Habbo.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1075" selectionTopPixel="102"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DatabaseManager.java" partName="DatabaseManager.java" path="C:/workspace/NeutrinoEmulator/src/core/storage/DatabaseManager.java" title="DatabaseManager.java" tooltip="NeutrinoEmulator/src/core/storage/DatabaseManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoEmulator/src/core/storage/DatabaseManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="339" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServerHandler.java" partName="ServerHandler.java" path="C:/workspace/NeutrinoServer/src/neutrino/Network/ServerHandler.java" title="ServerHandler.java" tooltip="NeutrinoServer/src/neutrino/Network/ServerHandler.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoServer/src/neutrino/Network/ServerHandler.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="54" selectionOffset="5392" selectionTopPixel="1785"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Session.java" partName="Session.java" path="C:/workspace/NeutrinoEmulator/src/core/game/users/Session.java" title="Session.java" tooltip="NeutrinoEmulator/src/core/game/users/Session.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoEmulator/src/core/game/users/Session.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="22" selectionOffset="790" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="hibernate.cfg.xml" partName="hibernate.cfg.xml" path="C:/workspace/NeutrinoEmulator/src/hibernate.cfg.xml" title="hibernate.cfg.xml" tooltip="NeutrinoEmulator/src/hibernate.cfg.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoEmulator/src/hibernate.cfg.xml"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="hibernate.cfg.xml" partName="hibernate.cfg.xml" path="C:/workspace/NeutrinoEmulator/src/hibernate.cfg.xml" title="hibernate.cfg.xml" tooltip="NeutrinoEmulator/src/hibernate.cfg.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoEmulator/src/hibernate.cfg.xml"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="411" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.PropertiesFileEditor" name="neutrino.properties" partName="neutrino.properties" path="C:/workspace/NeutrinoEmulator/neutrino.properties" title="neutrino.properties" tooltip="NeutrinoEmulator/neutrino.properties" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoEmulator/neutrino.properties"/>
+<editorState selectionHorizontalPixel="0" selectionLength="40" selectionOffset="427" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.PropertiesFileEditor" name="log4j.properties" partName="log4j.properties" path="C:/workspace/NeutrinoEmulator/src/log4j.properties" title="log4j.properties" tooltip="NeutrinoEmulator/src/log4j.properties" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoEmulator/src/log4j.properties"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="664" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadCatalogMessageComposer.java" partName="LoadCatalogMessageComposer.java" path="C:/workspace/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/catalog/LoadCatalogMessageComposer.java" title="LoadCatalogMessageComposer.java" tooltip="NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/catalog/LoadCatalogMessageComposer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/catalog/LoadCatalogMessageComposer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadFriendsMessageComposer.java" partName="LoadFriendsMessageComposer.java" path="C:/workspace/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/friendlist/LoadFriendsMessageComposer.java" title="LoadFriendsMessageComposer.java" tooltip="NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/friendlist/LoadFriendsMessageComposer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/friendlist/LoadFriendsMessageComposer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="950" selectionOffset="500" selectionTopPixel="51"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadClubMessageEvent.java" partName="LoadClubMessageEvent.java" path="C:/workspace/NeutrinoServer/src/com/sulake/habbo/communication/messages/incoming/login/LoadClubMessageEvent.java" title="LoadClubMessageEvent.java" tooltip="NeutrinoServer/src/com/sulake/habbo/communication/messages/incoming/login/LoadClubMessageEvent.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/incoming/login/LoadClubMessageEvent.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadClubMessageComposer.java" partName="LoadClubMessageComposer.java" path="C:/workspace/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/login/LoadClubMessageComposer.java" title="LoadClubMessageComposer.java" tooltip="NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/login/LoadClubMessageComposer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/login/LoadClubMessageComposer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="244" selectionOffset="1954" selectionTopPixel="244"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadGeneralRankingMessageComposer.java" partName="LoadGeneralRankingMessageComposer.java" path="C:/workspace/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/games/snowstorm/LoadGeneralRankingMessageComposer.java" title="LoadGeneralRankingMessageComposer.java" tooltip="NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/games/snowstorm/LoadGeneralRankingMessageComposer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/games/snowstorm/LoadGeneralRankingMessageComposer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="241" selectionOffset="1257" selectionTopPixel="57"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadAllRoomsMessageComposer.java" partName="LoadAllRoomsMessageComposer.java" path="C:/workspace/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/navigator/LoadAllRoomsMessageComposer.java" title="LoadAllRoomsMessageComposer.java" tooltip="NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/navigator/LoadAllRoomsMessageComposer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/navigator/LoadAllRoomsMessageComposer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2186" selectionTopPixel="867"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings (100 of 573 items)"/>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="75" org.eclipse.ui.ide.markerType="75" org.eclipse.ui.ide.pathField="100" org.eclipse.ui.ide.resourceField="75" org.eclipse.ui.ide.severityAndDescriptionField="250"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
+<child filterId="org.eclipse.m2e.MavenModuleFilter" isEnabled="false"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
+<viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
+<sorter groupBy="CATEGORY_QUERY">
+<sorter>
+<sort0 sortDirection="1" sortKey="PRIORITY"/>
+<sort1 sortDirection="1" sortKey="RANK"/>
+<sort2 sortDirection="1" sortKey="DATE_CREATED"/>
+<sort3 sortDirection="1" sortKey="NONE"/>
+<sort4 sortDirection="1" sortKey="NONE"/>
+<sort5 sortDirection="1" sortKey="NONE"/>
+<sort6 sortDirection="1" sortKey="NONE"/>
+<sort7 sortDirection="1" sortKey="NONE"/>
+</sorter>
+</sorter>
+<filteredTreeFindHistory/>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.wb.core.ui.actionset"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<show_view_action id="org.eclipse.wb.core.StructureView"/>
+<show_view_action id="org.eclipse.wb.core.PaletteView"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<new_wizard_action id="org.eclipse.mylyn.tasks.ui.wizards.new.repository.task"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
+<page content="org.eclipse.wb.core.StructureView" label="LabelNotFound"/>
+<page content="org.eclipse.wb.core.PaletteView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@3f7100fc" ratio="0.75" ratioLeft="756" ratioRight="252" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.14195915" ratioLeft="271" ratioRight="1638" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.5359042" ratioLeft="403" ratioRight="349" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@227f5ac9" ratio="0.82246375" ratioLeft="1135" ratioRight="245" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.mylyn.tasks.ui.views.tasks" appearance="2" expanded="2">
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.5" ratioLeft="247" ratioRight="247" relationship="4" relative="org.eclipse.ui.internal.ViewStack@227f5ac9">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@6ae911fd" ratio="0.69849783" ratioLeft="651" ratioRight="281" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.egit.ui.RepositoriesView" ratio="0.599393" ratioLeft="395" ratioRight="264" relationship="4" relative="left"/>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoEmulator/src/core/Environment.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoEmulator/src/core/messages/ServerMessage.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoServer/src/neutrino/System/ServerMessage.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoServer/src/neutrino/MessageEvents/MessageEvent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoEmulator/src/core/packetlog/ClientEvents.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoEmulator/src/com/sulake/habbo/communication/messages/incoming/handshake/HelloMessageEvent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoEmulator/src/core/network/SocketHandler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoEmulator/src/core/data/habbo/Habbo.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoEmulator/src/core/storage/DatabaseManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoServer/src/neutrino/Network/ServerHandler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoEmulator/src/core/game/users/Session.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/NeutrinoEmulator/src/hibernate.cfg.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/NeutrinoEmulator/src/hibernate.cfg.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" path="/NeutrinoEmulator/neutrino.properties"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" path="/NeutrinoEmulator/src/log4j.properties"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/catalog/LoadCatalogMessageComposer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/friendlist/LoadFriendsMessageComposer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/incoming/login/LoadClubMessageEvent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/login/LoadClubMessageComposer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/games/snowstorm/LoadGeneralRankingMessageComposer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/navigator/LoadAllRoomsMessageComposer.java"/>
+</editors>
+<item historyLabel="ServerMessage.java" index="1">
+<position info="not_deleted" x="2631" y="0"/>
+</item>
+<item historyLabel="Environment.java" index="0">
+<position info="not_deleted" x="3688" y="0"/>
+</item>
+<item historyLabel="ServerMessage.java" index="2">
+<position info="not_deleted" x="703" y="2799"/>
+</item>
+<item historyLabel="MessageEvent.java" index="3">
+<position info="not_deleted" x="313" y="97"/>
+</item>
+<item historyLabel="ServerHandler.java" index="9">
+<position info="not_deleted" x="5392" y="54"/>
+</item>
+<item historyLabel="ClientEvents.java" index="4">
+<position info="not_deleted" x="242" y="0"/>
+</item>
+<item historyLabel="Habbo.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SocketHandler.java" index="6">
+<position info="not_deleted" x="4998" y="0"/>
+</item>
+<item historyLabel="SocketHandler.java" index="6">
+<position/>
+</item>
+<item historyLabel="HelloMessageEvent.java" index="5">
+<position info="not_deleted" x="472" y="0"/>
+</item>
+<item historyLabel="ClientEvents.java" index="4">
+<position info="not_deleted" x="242" y="0"/>
+</item>
+<item historyLabel="MessageEvent.java" index="3">
+<position info="not_deleted" x="313" y="97"/>
+</item>
+<item historyLabel="ServerMessage.java" index="1">
+<position info="not_deleted" x="2631" y="0"/>
+</item>
+<item historyLabel="Session.java" index="10">
+<position info="not_deleted" x="790" y="22"/>
+</item>
+<item historyLabel="SocketHandler.java" index="6">
+<position/>
+</item>
+<item historyLabel="SocketHandler.java" index="6">
+<position info="not_deleted" x="4766" y="0"/>
+</item>
+<item historyLabel="Session.java" index="10">
+<position info="not_deleted" x="790" y="22"/>
+</item>
+<item historyLabel="HelloMessageEvent.java" index="5">
+<position info="not_deleted" x="415" y="0"/>
+</item>
+<item historyLabel="ServerMessage.java" index="1">
+<position info="not_deleted" x="2631" y="0"/>
+</item>
+<item historyLabel="Session.java" index="10">
+<position info="not_deleted" x="790" y="22"/>
+</item>
+<item historyLabel="SocketHandler.java" index="6">
+<position info="not_deleted" x="5061" y="0"/>
+</item>
+<item historyLabel="Environment.java" index="0">
+<position info="not_deleted" x="2120" y="0"/>
+</item>
+<item historyLabel="hibernate.cfg.xml" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="hibernate.cfg.xml" index="12">
+<position info="not_deleted" x="1306" y="0"/>
+</item>
+<item historyLabel="Environment.java" index="0">
+<position info="not_deleted" x="2120" y="0"/>
+</item>
+<item historyLabel="Environment.java" index="0">
+<position info="not_deleted" x="3341" y="0"/>
+</item>
+<item historyLabel="hibernate.cfg.xml" index="11">
+<position info="not_deleted" x="0" y="38"/>
+</item>
+<item historyLabel="hibernate.cfg.xml" index="12">
+<position info="not_deleted" x="1198" y="0"/>
+</item>
+<item historyLabel="neutrino.properties" index="13">
+<position info="not_deleted" x="427" y="40"/>
+</item>
+<item historyLabel="hibernate.cfg.xml" index="12">
+<position info="not_deleted" x="1198" y="0"/>
+</item>
+<item historyLabel="neutrino.properties" index="13">
+<position info="not_deleted" x="427" y="40"/>
+</item>
+<item historyLabel="hibernate.cfg.xml" index="12">
+<position info="not_deleted" x="405" y="0"/>
+</item>
+<item historyLabel="log4j.properties" index="14">
+<position info="not_deleted" x="664" y="0"/>
+</item>
+<item historyLabel="Environment.java" index="0">
+<position info="not_deleted" x="3540" y="0"/>
+</item>
+<item historyLabel="Habbo.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="DatabaseManager.java" index="8">
+<position info="not_deleted" x="323" y="0"/>
+</item>
+<item historyLabel="Environment.java" index="0">
+<position info="not_deleted" x="3540" y="0"/>
+</item>
+<item historyLabel="Environment.java" index="0">
+<position info="not_deleted" x="3390" y="0"/>
+</item>
+<item historyLabel="DatabaseManager.java" index="8">
+<position info="not_deleted" x="339" y="0"/>
+</item>
+<item historyLabel="Habbo.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Habbo.java" index="7">
+<position info="not_deleted" x="1082" y="0"/>
+</item>
+<item historyLabel="Habbo.java" index="7">
+<position info="not_deleted" x="1079" y="0"/>
+</item>
+<item historyLabel="Habbo.java" index="7">
+<position info="not_deleted" x="1080" y="0"/>
+</item>
+<item historyLabel="Habbo.java" index="7">
+<position info="not_deleted" x="1075" y="0"/>
+</item>
+<item historyLabel="LoadCatalogMessageComposer.java" index="15">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="LoadFriendsMessageComposer.java" index="16">
+<position info="not_deleted" x="500" y="950"/>
+</item>
+<item historyLabel="LoadClubMessageEvent.java" index="17">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="LoadClubMessageComposer.java" index="18">
+<position info="not_deleted" x="1954" y="244"/>
+</item>
+<item historyLabel="LoadGeneralRankingMessageComposer.java" index="19">
+<position info="not_deleted" x="1257" y="241"/>
+</item>
+<item active="true" historyLabel="LoadAllRoomsMessageComposer.java" index="20">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="right"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@227f5ac9"/>
+</trimArea>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+<trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@6ae911fd"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadAllRoomsMessageComposer.java" tooltip="NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/navigator/LoadAllRoomsMessageComposer.java">
+<persistable path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/navigator/LoadAllRoomsMessageComposer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadGeneralRankingMessageComposer.java" tooltip="NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/games/snowstorm/LoadGeneralRankingMessageComposer.java">
+<persistable path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/games/snowstorm/LoadGeneralRankingMessageComposer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadClubMessageComposer.java" tooltip="NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/login/LoadClubMessageComposer.java">
+<persistable path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/login/LoadClubMessageComposer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadClubMessageEvent.java" tooltip="NeutrinoServer/src/com/sulake/habbo/communication/messages/incoming/login/LoadClubMessageEvent.java">
+<persistable path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/incoming/login/LoadClubMessageEvent.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadFriendsMessageComposer.java" tooltip="NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/friendlist/LoadFriendsMessageComposer.java">
+<persistable path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/friendlist/LoadFriendsMessageComposer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadCatalogMessageComposer.java" tooltip="NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/catalog/LoadCatalogMessageComposer.java">
+<persistable path="/NeutrinoServer/src/com/sulake/habbo/communication/messages/outgoing/catalog/LoadCatalogMessageComposer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="log4j.properties" tooltip="NeutrinoEmulator/src/log4j.properties">
+<persistable path="/NeutrinoEmulator/src/log4j.properties"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="neutrino.properties" tooltip="NeutrinoEmulator/neutrino.properties">
+<persistable path="/NeutrinoEmulator/neutrino.properties"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="hibernate.cfg.xml" tooltip="NeutrinoEmulator/src/hibernate.cfg.xml">
+<persistable path="/NeutrinoEmulator/src/hibernate.cfg.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Session.java" tooltip="NeutrinoEmulator/src/core/game/users/Session.java">
+<persistable path="/NeutrinoEmulator/src/core/game/users/Session.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServerHandler.java" tooltip="NeutrinoServer/src/neutrino/Network/ServerHandler.java">
+<persistable path="/NeutrinoServer/src/neutrino/Network/ServerHandler.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DatabaseManager.java" tooltip="NeutrinoEmulator/src/core/storage/DatabaseManager.java">
+<persistable path="/NeutrinoEmulator/src/core/storage/DatabaseManager.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Habbo.java" tooltip="NeutrinoEmulator/src/core/data/habbo/Habbo.java">
+<persistable path="/NeutrinoEmulator/src/core/data/habbo/Habbo.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SocketHandler.java" tooltip="NeutrinoEmulator/src/core/network/SocketHandler.java">
+<persistable path="/NeutrinoEmulator/src/core/network/SocketHandler.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HelloMessageEvent.java" tooltip="NeutrinoEmulator/src/com/sulake/habbo/communication/messages/incoming/handshake/HelloMessageEvent.java">
+<persistable path="/NeutrinoEmulator/src/com/sulake/habbo/communication/messages/incoming/handshake/HelloMessageEvent.java"/>
+</file>
+</mruList>
+</workbench>

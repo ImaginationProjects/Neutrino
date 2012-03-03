@@ -1,0 +1,54 @@
+package com.sulake.habbo.communication.messages.outgoing.rooms;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.FutureTask;
+import neutrino.Environment;
+import neutrino.MessageEvents.MessageEvent;
+import neutrino.Network.ServerHandler;
+import neutrino.PacketsInformation.ServerEvents;
+import neutrino.System.ServerMessage;
+import neutrino.UserManager.DanceNumber;
+import neutrino.UserManager.Habbo;
+import neutrino.UserManager.SubscriptionManager;
+import neutrino.UserManager.UserManager;
+import neutrino.RoomManager.CommandHandler;
+import neutrino.RoomManager.Room;
+import org.jboss.netty.channel.Channel;
+
+public class CreateNewEventMessageComposer {
+	public static void Compose(ServerHandler Client, Habbo cUser, Environment Server) throws Exception
+	{
+		Habbo CurrentUser = Client.GetSession();
+        int RoomId = CurrentUser.CurrentRoomId;
+        Channel Socket = Client.Socket;
+        Room R = Room.Rooms.get(RoomId);
+        
+        int Category = Client.inreader.readInt();
+        String Title = Client.inreader.readUTF();
+        String Description = Client.inreader.readUTF();
+        int CountTags = Client.inreader.readInt();
+        List<String> Tags = new ArrayList<String>();
+        for(int i = 0; i < CountTags; i++)
+        {
+        	Tags.add(Client.inreader.readUTF());
+        }
+        
+        ServerMessage RoomEvents = new ServerMessage(ServerEvents.RoomEvents);
+        RoomEvents.writeUTF(CurrentUser.Id + "");
+        RoomEvents.writeUTF(CurrentUser.UserName);
+        RoomEvents.writeUTF(R.Id + "");
+        RoomEvents.writeInt(Category);
+        RoomEvents.writeUTF(Title);
+        RoomEvents.writeUTF(Description);
+        RoomEvents.writeInt(Tags.size());
+        Iterator reader = Tags.iterator();
+        while(reader.hasNext())
+        {
+        	String tag = (String)reader.next();
+        	RoomEvents.writeUTF(tag);
+        }
+        RoomEvents.Send(Socket);
+	}
+}

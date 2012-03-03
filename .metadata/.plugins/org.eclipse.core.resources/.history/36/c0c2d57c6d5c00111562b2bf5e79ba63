@@ -1,0 +1,8 @@
+package core.data;
+
+import java.util.*;
+import java.sql.*;
+
+public class DataManager {
+	public Map<String, Class> Manager;
+}

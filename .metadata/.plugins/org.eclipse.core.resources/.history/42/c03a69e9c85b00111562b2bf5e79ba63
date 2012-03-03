@@ -1,0 +1,16 @@
+package core.game.users;
+
+import org.jboss.netty.channel.Channel;
+import core.network.SocketHandler;
+
+public class Session {
+	// Habbo session
+	public Channel Socket;
+	public SocketHandler Client;
+	public Habbo GetHabbo;
+	
+	public Session(Channel Socket, SocketHandler Client)
+	{
+		
+	}
+}

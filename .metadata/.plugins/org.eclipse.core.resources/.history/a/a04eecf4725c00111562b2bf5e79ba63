@@ -1,0 +1,56 @@
+package core.storage;
+
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.jolbox.bonecp.BoneCP;
+import com.jolbox.bonecp.BoneCPConfig;
+
+import core.Environment;
+
+public class DatabaseManager {
+    // Hmm, must do some bonecp working
+	public BoneCP BoneCPConnection;
+	public static DatabaseManager CreateNewDatabaseManager() throws Exception
+	{
+		DatabaseManager D = new DatabaseManager();
+		try
+        {
+            Class.forName("com.mysql.jdbc.Driver"); // load jdbc driver
+        } catch (Exception e)
+        {
+        	Environment.WriteException(e);
+        }
+		BoneCPConfig config = new BoneCPConfig();
+		config.setJdbcUrl("jdbc:mysql://" + Environment.Properties.get("database.connection.host") + ":" + Environment.Properties.get("database.connection.port") + "/" + Environment.Properties.get("database.connection.name")); // set jdbc address
+    	config.setUsername(Environment.Properties.get("database.connection.username")); // username
+    	config.setPassword(Environment.Properties.get("database.connection.password")); // and password
+    	config.setMinConnectionsPerPartition(Integer.parseInt(Environment.Properties.get("database.connection.minpoolingsize")));
+    	config.setMaxConnectionsPerPartition(Integer.parseInt(Environment.Properties.get("database.connection.maxpoolingsize")));
+    	config.setPartitionCount(Integer.parseInt(Environment.Properties.get("database.connection.setpartitions")));
+    	config.setIdleMaxAgeInMinutes(2);
+        config.setIdleConnectionTestPeriodInMinutes(1);
+    	config.setLazyInit(false);
+    	
+    	D.BoneCPConnection = new BoneCP(config);
+    	Environment.WriteStatus("Initialized one new database manager with BoneCP succesfully");
+		return D;
+	}
+	
+	public BoneCP returnConnection()
+	{
+		return BoneCPConnection;
+	}
+	
+	public Statement prepareStatement() throws Exception
+	{
+		Statement s = BoneCPConnection.getConnection().createStatement();
+		s.closeOnCompletion();
+        return s;        
+	}
+	
+	public void closeStatement(Statement s) throws Exception
+	{
+		s.close();
+	}
+}

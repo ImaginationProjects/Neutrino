@@ -1,0 +1,50 @@
+package com.sulake.habbo.communication.messages.outgoing.administration;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.jboss.netty.channel.Channel;
+
+import neutrino.Environment;
+import neutrino.AdministrationManager.CallsForHelp;
+import neutrino.AdministrationManager.Chatlog;
+import neutrino.Network.ServerHandler;
+import neutrino.PacketsInformation.ServerEvents;
+import neutrino.RoomManager.Room;
+import neutrino.System.ServerMessage;
+import neutrino.UserManager.Habbo;
+
+public class PickTicketMessageComposer {
+	public static void Compose(ServerHandler Client, Habbo cUser, Environment Server) throws Exception
+	{
+		if(cUser.RankLevel < 5)
+        {
+			return;
+        }
+		Habbo CurrentUser = Client.GetSession();
+        int UserId = Client.inreader.readInt();
+        Channel Socket = Client.Socket;
+        int CallForHelpID = Client.inreader.readInt();
+        CallsForHelp C = CallsForHelp.Calls.get(CallForHelpID);
+        if(C == null)
+        	return;
+        
+        Habbo User = Habbo.UsersbyId.get(UserId);
+        
+        ServerMessage UserInfo = new ServerMessage(ServerEvents.MOD_SHOWUSERINFO);
+        UserInfo.writeInt(UserId);
+        UserInfo.writeUTF(User.UserName);
+        UserInfo.writeInt(0); // reg timestamp (minutes)
+        UserInfo.writeInt(0); // login timestamp (minutes)
+        UserInfo.writeBoolean(User.IsOnline);
+        UserInfo.writeInt(1); // cfhs
+        //UserInfo.writeBoolean(true);
+        UserInfo.writeInt(5); // cfhs abusive
+        UserInfo.writeInt(3); // cautions
+        UserInfo.writeInt(2); // bans
+        UserInfo.Send(Client.Socket);
+        
+        
+	}
+}

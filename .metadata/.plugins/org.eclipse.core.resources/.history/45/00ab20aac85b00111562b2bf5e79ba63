@@ -1,0 +1,6 @@
+package core.game.users;
+
+public class Session {
+	// Habbo session
+	
+}

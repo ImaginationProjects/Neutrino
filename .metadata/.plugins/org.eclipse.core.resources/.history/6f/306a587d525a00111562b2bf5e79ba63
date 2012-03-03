@@ -1,0 +1,14 @@
+package neutrino.RoomManager;
+
+import java.util.*;
+
+public class RoomEvent {
+	public int OwnerId;
+	public int RoomId;
+	public int Category;
+	public String Title;
+	public String Description;
+	public String Created;
+	public List<String> Tags;
+	
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="237" key="DIALOG_WIDTH"/>
+		<item value="318" key="DIALOG_Y_ORIGIN"/>
+		<item value="1063" key="DIALOG_X_ORIGIN"/>
+		<item value="357" key="DIALOG_HEIGHT"/>
+		<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="IPFrom" key="selection"/>
+		<list key="findhistory">
+			<item value="ipfrom"/>
+			<item value="invento"/>
+			<item value="inventa"/>
+			<item value="loadinv"/>
+			<item value="loadinvent"/>
+			<item value="2113"/>
+			<item value="pick"/>
+			<item value="ModTools"/>
+		</list>
+		<list key="replacehistory">
+			<item value="Issue"/>
+			<item value="ModTools"/>
+			<item value=""/>
+			<item value="; else"/>
+			<item value=")"/>
+			<item value="if (effect == "/>
+			<item value="Effects."/>
+			<item value="UserToLoad"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="413" key="DIALOG_Y_ORIGIN"/>
+		<item value="765" key="DIALOG_X_ORIGIN"/>
+	</section>
+</section>

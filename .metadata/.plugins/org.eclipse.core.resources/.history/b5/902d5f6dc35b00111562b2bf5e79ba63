@@ -1,0 +1,24 @@
+package core;
+
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+public class Environment {
+	// general controller of Neutrino, init all idiot things.
+	
+	private static String CurrentTime()
+	{
+		 SimpleDateFormat formattime = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss ('ms' ms)", new Locale("es_ES"));
+		 Date D = new Date();
+		 return formattime.format(D);
+	}
+	public static void WriteStatus(String Line)
+	{
+		System.out.println("[" + CurrentTime() + "][STATE] " + Line);
+	}
+	
+	public static void Init()
+	{
+		WriteStatus("Starting...");
+	}
+}

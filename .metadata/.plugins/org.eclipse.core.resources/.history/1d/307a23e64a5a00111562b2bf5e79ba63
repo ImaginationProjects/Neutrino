@@ -1,0 +1,286 @@
+package neutrino.UserManager;
+
+public class EffectNumber
+{
+     public static int GetEffectNum(Effects effect)
+     {
+            default:
+                return 0;
+
+            case Effects.GLOW:
+                return 1;
+
+            case Effects.BLUE_SKATEBOARD:
+                return 2;
+
+            case Effects.BLUE_CAR:
+                return 3;
+
+            case Effects.SPARKLE:
+                return 4;
+
+            case Effects.TORCH:
+                return 5;
+
+            case Effects.ROCKET:
+                return 6;
+
+            case Effects.BUTTERFLIES:
+                return 7;
+
+            case Effects.FIREFLIES:
+                return 8;
+
+            case Effects.LOVE_HEARTS:
+                return 9;
+
+            case Effects.FLIES:
+                return 10;
+
+            case Effects.GREEN_GLOW:
+                return 11;
+
+            case Effects.FROZEN:
+                return 12;
+
+            case Effects.GHOST:
+                return 13;
+
+            case Effects.PINK_SKATEBOARD:
+                return 14;
+
+            case Effects.YELLOW_SKATEBOARD:
+                return 15;
+
+            case Effects.MICROPHONE:
+                return 16;
+
+            case Effects.PINK_CAR:
+                return 17;
+
+            case Effects.YELLOW_CAR:
+                return 18;
+
+            case Effects.POLICE_CAR:
+                return 19;
+
+            case Effects.AMBULANCE_CAR:
+                return 20;
+
+            case Effects.BLUE_SPORTS_CAR:
+                return 21;
+
+            case Effects.YELLOW_SPORTS_CAR:
+                return 22;
+
+            case Effects.FLOATING_GREEN_GLOW:
+                return 23;
+
+            case Effects.RAINING:
+                return 24;
+
+            case Effects.FIRE:
+                return 25;
+
+            case Effects.FIRE_STAFF:
+                return 26;
+
+            case Effects.KNIGHT_HELMET_WITH_SWORD:
+                return 27;
+
+            case Effects.SWIMMING_IN_WATER:
+                return 28;
+
+            case Effects.SWIMMING_IN_WATER2:
+                return 29;
+
+            case Effects.PADDLING_IN_WATER:
+                return 30;
+
+            case Effects.TIGER:
+                return 31;
+
+            case Effects.DESPICABLE_ME_MINION_EYE:
+                return 32;
+
+            case Effects.BANZAI_PURPLE:
+                return 33;
+
+            case Effects.BANZAI_GREEN:
+                return 34;
+
+            case Effects.BANZAI_BLUE:
+                return 35;
+
+            case Effects.BANZAI_YELLOW:
+                return 36;
+
+            case Effects.PADDLING_GREEN_WATER:
+                return 37;
+
+            case Effects.MALE_ICE_SKATES:
+                return 38;
+
+            case Effects.FEMALE_ICE_SKATES:
+                return 39;
+
+            case Effects.FREEZE_GAME_RED_HELMET:
+                return 40;
+
+            case Effects.FREEZE_GAME_GREEN_HELMET:
+                return 41;
+
+            case Effects.FREEZE_GAME_WHITE_HELMET:
+                return 42;
+
+            case Effects.FREEZE_GAME_BLACK_HELMET:
+                return 43;
+
+            case Effects.SIMS_DIAMOND:
+                return 44;
+
+            case Effects.FLOATING_SPARKLING_GLOW:
+                return 45;
+
+            case Effects.FLOATING_SPARKLING_GLOW2:
+                return 46;
+
+            case Effects.MEGAMIND_BLUE_FACE:
+                return 47;
+
+            case Effects.DOG_CAR:
+                return 48;
+
+            case Effects.FREEZE_GAME_RED_HELMET_GLOWING:
+                return 49;
+
+            case Effects.FREEZE_GAME_GREEN_HELMET_GLOWING:
+                return 50;
+
+            case Effects.FREEZE_GAME_WHITE_HELMET_GLOWING:
+                return 51;
+
+            case Effects.FREEZE_GAME_BLACK_HELMET_GLOWING:
+                return 52;
+
+            case Effects.BIRDIES_OVER_HEAD:
+                return 53;
+
+            case Effects.BUNNY_CAR:
+                return 54;
+
+            case Effects.BLUE_MALE_ROLLER_SKATES:
+                return 55;
+
+            case Effects.PINK_FEMALE_ROLLER_SKATES:
+                return 56;
+
+            case Effects.SLOWLY_GLOWING:
+                return 57;
+
+            case Effects.SLOWLY_GLOWING2:
+                return 58;
+
+            case Effects.PULSATING_GLOW:
+                return 59;
+
+            case Effects.CROCODILE_HEAD:
+                return 60;
+
+            case Effects.BIG_YELLOW_STARS_OVER_HEAD:
+                return 61;
+
+            case Effects.BIG_PURPLE_STARS_OVER_HEAD:
+                return 62;
+
+            case Effects.BIG_PINK_STARS_OVER_HEAD:
+                return 63;
+
+            case Effects.CANDLE:
+                return 64;
+
+            case Effects.MOBILE_PHONE_RINGING:
+                return 65;
+
+            case Effects.RED_GLOWING_WAND:
+                return 66;
+
+            case Effects.RIO_BIRD:
+                return 67;
+
+            case Effects.BUNNY_RUN:
+                return 68;
+
+            case Effects.RED_VROOM_CAR:
+                return 69;
+
+            case Effects.PANDA:
+                return 70;
+
+            case Effects.BLACK_SKATEBOARD:
+                return 71;
+
+            case Effects.BLACK_SKATEBOARD2:
+                return 72;
+
+            case Effects.RED_LOLLIPOP_HEAD:
+                return 73;
+
+            case Effects.COLOUR_FLOWERS_AROUND_NECK:
+                return 74;
+
+            case Effects.COLOUR_FLOWERS_AROUND_NECK2:
+                return 75;
+
+            case Effects.COLOUR_FLOWERS_AROUND_NECK3:
+                return 76;
+
+            case Effects.HORSE_SADDLE:
+                return 77;
+
+            case Effects.PERRI:
+                return 78;
+
+            case Effects.PURPLE_ALIEN:
+                return 79;
+
+            case Effects.HALLOWEEN_MOUTH_FACE:
+                return 80;
+
+            case Effects.HALLOWEEN_GREEN_HEAD:
+                return 81;
+
+            case Effects.HALLOWEEN_MASK:
+                return 82;
+
+            case Effects.HALLOWEEN_MASK2:
+                return 83;
+
+            case Effects.HALLOWEEN_FACE_MUMMY:
+                return 84;
+
+            case Effects.PUMPKIN_HEAD:
+                return 85;
+
+            case Effects.POTATO_SACK_MASK:
+                return 86;
+
+            case Effects.WAREWOLF_MASK:
+                return 87;
+
+            case Effects.HALLOWEEN_GREEN_MASK:
+                return 88;
+
+            case Effects.HALLOWEEN_KNIFE_THROUGH_BODY:
+                return 89;
+
+            case Effects.BUTTERFLY_WINGS:
+                return 90;
+
+            case Effects.GHOSTLY_BUTTERFLY_WINGS:
+                return 91;
+
+            case Effects.GHOST_COVER:
+                return 92;
+     }
+}

@@ -1,0 +1,57 @@
+package com.sulake.habbo.communication.messages.outgoing.navigator;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import neutrino.Network.ServerHandler;
+import neutrino.PacketsInformation.ServerEvents;
+import neutrino.RoomManager.Room;
+import neutrino.System.ServerMessage;
+import neutrino.UserManager.Habbo;
+
+public class LoadEventRoomsMessageComposer {
+	public static void Compose(ServerHandler Client, Habbo User) throws Exception
+	{
+		Habbo CurrentHabbo = Client.GetSession();
+		String Category = Client.inreader.readUTF();
+		int CategoryId = Integer.parseInt(Category);
+		
+		List<Room> mRooms = RoomEvent.GetRoomsForCategory(CategoryId);
+        
+        List<Room> zRoom = new ArrayList<Room>();
+        List<Room> finalRooms = new ArrayList<Room>();
+        int CurrentMax = 0;
+        Iterator reader1 = mRooms.iterator();
+        while (reader1.hasNext())
+        {
+        	Room Data = (Room)reader1.next();
+            if (Data.CurrentUsers > 0)
+            {
+                if (Data.CurrentUsers > CurrentMax)
+                    CurrentMax = Data.CurrentUsers;
+                zRoom.add(Data);
+            }
+        }
+        
+        int MaxRooms = 0;
+        
+        for (int i = 0; CurrentMax != i; )
+        {
+        	Iterator reader2 = zRoom.iterator();
+            while (reader2.hasNext())
+            {
+            	Room Data = (Room)reader2.next();
+                if (Data.CurrentUsers == CurrentMax)
+                    finalRooms.add(Data);
+            }
+            CurrentMax--;
+        }
+
+		
+        ServerMessage MyRooms = new ServerMessage(ServerEvents.LookRooms);
+        MyRooms.writeInt(12);
+        MyRooms.writeUTF(Category);
+        
+	}
+}

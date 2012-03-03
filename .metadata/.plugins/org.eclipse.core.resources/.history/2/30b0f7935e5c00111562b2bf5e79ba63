@@ -1,0 +1,14 @@
+package core.storage;
+
+import com.jolbox.bonecp.BoneCP;
+
+public class DatabaseManager {
+    // Hmm, must do some bonecp working
+	public BoneCP BoneCPConnection;
+	public static DatabaseManager CreateNewDatabaseManager()
+	{
+		DatabaseManager D = new DatabaseManager();
+		
+		return D;
+	}
+}

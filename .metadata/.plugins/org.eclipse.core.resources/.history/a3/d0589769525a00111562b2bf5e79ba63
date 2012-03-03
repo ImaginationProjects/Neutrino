@@ -1,0 +1,10 @@
+package neutrino.RoomManager;
+
+public class RoomEvent {
+	public int OwnerId;
+	public int RoomId;
+	public int Category;
+	public String Title;
+	public String Description;
+	public String Created;
+}

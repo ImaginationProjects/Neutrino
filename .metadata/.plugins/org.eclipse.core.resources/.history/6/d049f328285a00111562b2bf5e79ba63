@@ -1,0 +1,51 @@
+package com.sulake.habbo.communication.messages.outgoing.rooms;
+
+import java.util.concurrent.FutureTask;
+import neutrino.Environment;
+import neutrino.MessageEvents.MessageEvent;
+import neutrino.Network.ServerHandler;
+import neutrino.PacketsInformation.ServerEvents;
+import neutrino.PetManager.Pet;
+import neutrino.System.ServerMessage;
+import neutrino.UserManager.Habbo;
+import neutrino.UserManager.SubscriptionManager;
+import neutrino.UserManager.UserManager;
+import neutrino.RoomManager.CommandHandler;
+import neutrino.RoomManager.Room;
+import org.jboss.netty.channel.Channel;
+
+public class TrainPetMessageComposer {
+	public static void Compose(ServerHandler Client, Habbo cUser, Environment Server) throws Exception
+	{
+		Habbo CurrentUser = Client.GetSession();
+        int RoomId = CurrentUser.CurrentRoomId;
+        Channel Socket = Client.Socket;
+        Room R = Room.Rooms.get(RoomId);
+        
+        int PetId = Client.in.readInt();
+        Pet PetData = Pet.Pets.get(PetId);
+        
+        if(PetData.equals(null))
+        	return;
+        
+        ServerMessage Panel = new ServerMessage(ServerEvents.ShowTrainingPanel);
+        Panel.writeInt(PetId);
+        int cmds = 32;
+        if(PetData.Race == 2)
+        	cmds = 22;
+        Panel.writeInt(cmds);
+        for (int i = 0; i <= cmds; i++) 
+        {
+        	Panel.writeInt(i);
+        }
+        if (PetData.Level < cmds)
+        {
+	         cmds = PetData.Level;
+        }
+        for (int i = 0; i < cmds; i++) 
+        {
+        	Panel.writeInt(i);
+        }
+        Panel.Send(Socket);
+	}
+}

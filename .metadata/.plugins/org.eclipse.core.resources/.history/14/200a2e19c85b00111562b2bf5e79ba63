@@ -1,0 +1,25 @@
+package core.network;
+
+import java.io.DataInputStream;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.logging.Logger;
+
+import org.jboss.netty.buffer.ChannelBuffer;
+import org.jboss.netty.channel.Channel;
+import org.jboss.netty.channel.SimpleChannelUpstreamHandler;
+
+public class SocketHandler extends SimpleChannelUpstreamHandler {
+	private static final Logger logger = Logger.getLogger(
+            SocketHandler.class.getName());
+
+    public DataInputStream inreader;
+    public ChannelBuffer in;
+    private final AtomicLong transferredBytes = new AtomicLong();
+    public Channel Socket;
+
+    public long getTransferredBytes() {
+        return transferredBytes.get();
+    }
+    
+    // And now, all code to make sockets work!
+}
