@@ -1,0 +1,142 @@
+package core.network;
+
+import java.io.ByteArrayInputStream;
+import java.io.DataInputStream;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.logging.Logger;
+
+import core.Environment;
+
+import org.jboss.netty.buffer.ChannelBuffer;
+import org.jboss.netty.buffer.ChannelBuffers;
+import org.jboss.netty.channel.Channel;
+import org.jboss.netty.channel.ChannelFuture;
+import org.jboss.netty.channel.ChannelFutureListener;
+import org.jboss.netty.channel.ChannelHandlerContext;
+import org.jboss.netty.channel.ChannelStateEvent;
+import org.jboss.netty.channel.MessageEvent;
+import org.jboss.netty.channel.SimpleChannelUpstreamHandler;
+
+import core.game.users.Session;
+
+public class SocketHandler extends SimpleChannelUpstreamHandler {
+	private static final Logger logger = Logger.getLogger(
+            SocketHandler.class.getName());
+    private static int Sessions = 1;
+
+    public DataInputStream inreader;
+    public ChannelBuffer in;
+    private final AtomicLong transferredBytes = new AtomicLong();
+    public Channel Socket;
+
+    public long getTransferredBytes() {
+        return transferredBytes.get();
+    }
+    
+    // And now, all code to make sockets work!
+    public Session GetSession()
+    {
+    	if(Session.SessionsByChannels != null)
+    		return Session.SessionsByChannels.get(Socket);
+    	return null;
+    }
+    
+    @Override
+    public void channelConnected(ChannelHandlerContext ctx, ChannelStateEvent e) throws Exception
+    {
+    	// When ChannelConnected, we set the socket and create a new session of it
+    	this.Socket = e.getChannel();
+        if(GetSession() == null)
+        	Session.SetSession(Socket, this, Sessions); Sessions++;
+    }
+    
+    @Override
+    public void channelDisconnected(ChannelHandlerContext ctx, ChannelStateEvent e) throws Exception
+    {
+    	// disconnect
+    	if(!(GetSession() == null))
+    	{
+    		if(!GetSession().IsOnline)
+    		{
+        		Environment.WriteDebug("[POLICY] REMOVED SESSION #" + GetSession().SessionId); 
+        		Session.SessionsByChannels.remove(Socket); // remove session of policy (idiot sesion!)
+        		Sessions--;
+    		}
+        	else
+        	{
+        		// Disconnect user
+        	}
+    	}
+    }
+      
+    @Override
+    public void messageReceived(ChannelHandlerContext ctx, MessageEvent e) throws Exception
+    {
+    	// packet received
+    	ChannelBuffer Buffer = (ChannelBuffer) e.getMessage();
+    	if (Buffer.readableBytes() < 6)
+  	    {
+    		// can't read, need (int len -> 4bytes + short header -> 2 bytes)
+    		Socket.disconnect();
+    		Session.SessionsByChannels.remove(Socket); // remove session
+    		Socket.disconnect(); // end connection
+  		    return;
+  	    }
+    	
+    	if(Buffer.getByte(0) == 60) // <
+        {
+    		// XML REQUEST => Send policy
+    		byte Bytes[] = "<?xml version=\"1.0\"?>\r\n<!DOCTYPE cross-domain-policy SYSTEM \"/xml/dtds/cross-domain-policy.dtd\">\r\n<cross-domain-policy>\r\n   <allow-access-from domain=\"*\" to-ports=\"1-65535\" />\r\n</cross-domain-policy>\0".getBytes();
+            ChannelBuffer buffer2 = ChannelBuffers.wrappedBuffer(Bytes);
+            ChannelFuture future = Socket.write(buffer2);
+            future.addListener(ChannelFutureListener.CLOSE);
+            return;
+        }
+    	  
+    	while(Buffer.readableBytes() != 0)
+    	{
+    		int Len = Buffer.readInt(); // read len on packet
+    	    this.ReadMessage(Buffer.readBytes(Len), e);
+    	}
+    }
+    
+    public void ReadMessage(ChannelBuffer Message, MessageEvent e) throws Exception
+    {
+    	Environment.WriteDebug("Packet from Session #" + GetSession().SessionId);
+    	int Header = Message.readShort();
+    	DataInputStream i = null;
+    	String Analized = "<No more data available>";
+    	if(Message.readableBytes() > 0)
+    	{
+    		Analized = "";
+    		Message.markReaderIndex();
+    		while(Message.readableBytes() != 0)
+    		{
+    			byte[] b = new byte[] { Message.readByte() };
+    			Analized += (new String(b)).toString();
+    		}
+        	i = new DataInputStream(new ByteArrayInputStream(Analized.getBytes()));
+    		// Update Formats
+    		Analized = Analized.replace((char)0 + "", "[0]");
+            Analized = Analized.replace((char)1 + "", "[1]");
+            Analized = Analized.replace((char)2 + "", "[2]");
+            Analized = Analized.replace((char)10 + "", "[10]");
+            Analized = Analized.replace((char)13 + "", "[13]");
+            Message.resetReaderIndex();
+    	}
+    	if(Environment.Messages[Header] != null)
+    	{
+    		if(GetSession().myHabbo != null)
+    		{
+        		this.in = Message;
+      		    this.inreader = i;
+      		    GetSession().Client = this;
+      	    	Environment.WritePacket(" [" + Header + "] " + Analized + " / LEN: " + Message.readableBytes(), true);
+        		Environment.Messages[Header].Load(this, GetSession());
+    		}
+    	} else {
+        	Environment.WritePacket("(No logged!) [" + Header + "] " + Analized + " / LEN: " + Message.readableBytes(), true);
+    	}
+    }
+}
